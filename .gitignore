@@ -1,0 +1,71 @@
+# Environment (keep .env.example committed)
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Python
+*/.venv/
+*/venv/
+*/env/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.Python
+**.egg-info/
+*.eggs/
+*dist/
+*build/
+*package/
+*.pytest_cache/
+*.mypy_cache/
+*.ruff_cache/
+*.coverage
+*coverage.xml
+*htmlcov/
+*.tox/
+*.nox/
+**.egg
+
+# Lambda CI build artifacts (GitHub Actions)
+**/deployment.zip
+**/deployment.zip
+
+# Node (stream-lambda)
+*/stream-lambda/node_modules/
+*/stream-lambda/dist/
+*/stream-lambda/.npm-cache/
+*/npm-debug.log*
+*/yarn-error.log*
+
+# Terraform — infra/terraform (commit .terraform.lock.hcl)
+*/infra/terraform/**/.terraform/
+*/infra/terraform/**/.generated/
+*/infra/terraform/**/terraform.tfvars
+*/!infra/terraform/deployments/non-prod/terraform.tfvars
+*/infra/terraform/**/*.auto.tfvars
+*/infra/terraform/**/*.tfstate
+*/infra/terraform/**/*.tfstate.*
+*/infra/terraform/**/crash.log
+*/infra/terraform/**/crash.*.log
+*/infra/terraform/**/override.tf
+*/infra/terraform/**/override.tf.json
+*/infra/terraform/**/*_override.tf
+*/infra/terraform/**/*_override.tf.json
+*/infra/terraform/**/tfplan
+*/infra/terraform/**/tfplan.binary
+*/infra/terraform/**/.terraform-plan-output.txt
+
+# Local debug / scratch (may contain PII)
+debug/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
