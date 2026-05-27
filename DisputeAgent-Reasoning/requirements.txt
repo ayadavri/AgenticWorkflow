@@ -1,0 +1,16 @@
+# Lambda: handler in lambda/ plus src/ for LangGraph / OpenAI / Anthropic / boto3 / Pydantic.
+# Top-level deps only. Pip pulls langchain-core, langgraph-checkpoint, httpx, etc.
+# Excludes app stacks (e.g. Streamlit, pandas) not imported by the graph.
+#
+# cryptography pinned below 43.x: newer wheels use _rust bindings that need newer glibc than some Lambda images.
+# cryptography 41.x ships cp311 wheels. Use Lambda Docker build if you upgrade past this pin.
+
+boto3>=1.42.89,<2
+pydantic>=2.12,<3
+pydantic-settings>=2.0
+python-dotenv>=1.0
+anthropic>=0.96
+openai>=2.31
+langgraph>=1.0.4,<2
+cryptography==41.0.7
+bedrock-agentcore>=1.11.0

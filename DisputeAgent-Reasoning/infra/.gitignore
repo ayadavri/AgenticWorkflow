@@ -1,0 +1,18 @@
+# See dispute-agent/.gitignore at repo root for full rules.
+
+.terraform/
+.generated/
+*.tfstate
+*.tfstate.*
+terraform.tfvars
+!terraform/deployments/non-prod/terraform.tfvars
+*.auto.tfvars
+tfplan
+tfplan.binary
+.terraform-plan-output.txt
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json

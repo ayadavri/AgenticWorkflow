@@ -1,0 +1,19 @@
+{
+  "name": "dispute-core-stream-lambda",
+  "version": "1.0.0",
+  "main": "dist/dispute-core-stream/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "tsx --test eventBridgeDisputePublish.test.ts"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.1030.0",
+    "@aws-sdk/client-eventbridge": "^3.750.0",
+    "@aws-sdk/util-dynamodb": "^3.996.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  }
+}
